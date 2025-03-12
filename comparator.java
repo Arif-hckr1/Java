@@ -15,7 +15,7 @@ class Checker implements Comparator<Player> {
         return a.name.compareTo(b.name);
     }
 }
-public class Solution {
+public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
