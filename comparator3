@@ -1,0 +1,22 @@
+package lesson12;
+
+import java.util.Comparator;
+
+public class PlayerComparator2 implements Comparator<Student> {
+
+    @Override
+    public int compare(Student student1, Student student2) {
+        int comparegrade = Long.compare(student2.grade, studnet1.grade);
+        if (comparegrade != 0) {
+            return comparegrade;
+        }
+        int comparebirthdate = student1.compareTo(student2);
+        if (comparebirthdate != 0) {
+            return compareName;
+        }
+        if (student1.isFemale != student2.isFemale) {
+            return student1.isFemale ? 1 : -1;
+        }
+        return Long.compare(student1.id, student2.id);
+    }
+}
