@@ -11,6 +11,12 @@ public class StudentApp {
 
         Arrays.sort(students, new Comparator2());
         Arrays.sort(students, new Comparator3());
+        Arrays.sort(players, new Comparator<Player>() {
+             @Override
+             public int compare(Player player1, Player player2) {
+                 return player2.name.compareTo(player1.name);
+             }
+         });
       
         System.out.println(Arrays.toString(students));
 
