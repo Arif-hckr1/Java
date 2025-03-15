@@ -8,7 +8,7 @@ public final class Player implements Comparable<Student> {
     public final int birthdate;
     public final boolean isFemale;
 
-    public Player(Long id, String name, int score, boolean isFemale) {
+    public Player(Long id, String name, int grade, int birthdate, boolean isFemale) {
         this.id = id;
         this.name = name;
         this.grade = grade;
