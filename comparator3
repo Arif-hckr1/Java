@@ -12,7 +12,7 @@ public class Comparator3 implements Comparator<Student> {
         }
         int comparebirthdate = student1.compareTo(student2);
         if (comparebirthdate != 0) {
-            return compareName;
+            return comparebirthdate;
         }
         if (student1.isFemale != student2.isFemale) {
             return student1.isFemale ? 1 : -1;
