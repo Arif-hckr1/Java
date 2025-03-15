@@ -1,0 +1,52 @@
+import java.util.*;
+
+interface PerformOperation {
+    boolean check(int a);
+}
+
+class MyMath {
+    public static PerformOperation isOdd() {
+        return (int a) -> a % 2 != 0;
+    }
+
+    public static PerformOperation isPrime() {
+        return (int a) -> {
+            if (a < 2) return false;
+            for (int i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i == 0) return false;
+            }
+            return true;
+        };
+    }
+
+    public static PerformOperation isPalindrome() {
+        return (int a) -> {
+            String s = String.valueOf(a);
+            return s.equals(new StringBuilder(s).reverse().toString());
+        };
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T-- > 0) {
+            int choice = sc.nextInt();
+            int num = sc.nextInt();
+            PerformOperation op;
+            
+            switch (choice) {
+                case 1: op = MyMath.isOdd(); break;
+                case 2: op = MyMath.isPrime(); break;
+                case 3: op = MyMath.isPalindrome(); break;
+                default: throw new IllegalArgumentException("Invalid choice");
+            }
+            
+            System.out.println(op.check(num) ? 
+                (choice == 1 ? "ODD" : (choice == 2 ? "PRIME" : "PALINDROME")) 
+                : (choice == 1 ? "EVEN" : "COMPOSITE"));
+        }
+        sc.close();
+    }
+}
