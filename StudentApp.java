@@ -13,8 +13,8 @@ public class StudentApp {
         Arrays.sort(students, new Comparator3());
         Arrays.sort(players, new Comparator<Player>() {
              @Override
-             public int compare(Player player1, Player player2) {
-                 return player2.name.compareTo(player1.name);
+             public int compare(Student student1, Student student2) {
+                 return student2.name.compareTo(student1.name);
              }
          });
       
