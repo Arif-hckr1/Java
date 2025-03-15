@@ -1,6 +1,6 @@
 package lesson12;
 
-public final class Player implements Comparable<Student> {
+public final class Student implements Comparable<Student> {
 
     public final Long id;
     public final String name;
