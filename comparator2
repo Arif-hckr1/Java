@@ -2,10 +2,10 @@ package lesson12;
 
 import java.util.Comparator;
 
-public class PlayerComparator1 implements Comparator<Student> {
+public class comparator2 implements Comparator<Student> {
 
     @Override
-    public int compare(Player player1, Player player2) {
-        return Long.compare(player2.id, player1.id);
+    public int compare(Student student1, Student student2) {
+        return Long.compare(student2.id, student1.id);
     }
 }
