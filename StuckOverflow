@@ -1,0 +1,12 @@
+public class Main {
+    public static void recur() {
+        recursiveMethod();
+    }
+    public static void main(String[] args) {
+        try {
+            recur();
+        } catch (StackOverflowError e) {
+            System.out.println("Stack overflow error bas verir");
+        }
+    }
+}
