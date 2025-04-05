@@ -1,0 +1,23 @@
+class NegativeNumberException extends Exception {
+    public NegativeNumberException(String message) {
+        super(message);
+    }
+}
+public class Custom {
+    public static void checkNumber(int number) throws NegativeNumberException {
+        if (number < 0) {
+            throw new NegativeNumberException("Mənfi ədəd daxil etmək olmaz!");
+        } else {
+            System.out.println("Düzgün ədəddir");
+        }
+    }
+    public static void main(String[] args) {
+        try {
+            checkNumber(-5);
+        } catch (NegativeNumberException e) {
+            System.out.println("Error");
+        } finally {
+            System.out.println("Program bitdi");
+        }
+    }
+}
