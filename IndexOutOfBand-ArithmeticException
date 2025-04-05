@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+int[] Myarray = new int[3];
+        Myarray[0] = 1;
+        Myarray[1] = 2;
+        Myarray[2] = 3;
+        try {
+            int a = 10 / 0;
+            System.out.println(Myarray[3]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Arrayin uzunlugundan kenara cixildi");
+        } catch (ArithmeticException ex) {
+            System.out.println(" 0 a bolme yoxdur");
+  }
+  }
+}
